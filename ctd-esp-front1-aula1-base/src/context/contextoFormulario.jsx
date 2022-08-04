@@ -1,6 +1,19 @@
+import { useContext } from "react";
 import { createContext, useReducer } from "react";
 
-export const FormContext = createContext({});
+const FormContext = createContext({});
+
+
+export function useFormContext() {
+  const formData = useContext(FormContext)
+
+  console.log(formData)
+  if(!formData) {
+    throw new Error("O componente precisar estar no contexto")
+  }
+
+  return formData;
+}
 
 const initialState = {
   trainer: {},

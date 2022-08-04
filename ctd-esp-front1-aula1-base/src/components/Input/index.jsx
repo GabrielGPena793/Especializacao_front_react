@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { useRef } from "react";
-import { FormContext } from "../../context/contextoFormulario";
+import { useFormContext } from "../../context/contextoFormulario";
 
 const Input = ({ name, label, type = "text" }) => { 
-  const { dispatch } = useContext(FormContext)
+  const { dispatch } = useFormContext()
 
   const inputRef = useRef(null)
 

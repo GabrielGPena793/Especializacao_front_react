@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { FormContext } from "../../context/contextoFormulario";
+import React from "react";
+import { useFormContext } from "../../context/contextoFormulario";
 
 const Detalhe = () => {
-  const { state } = useContext(FormContext)
+  const { state } = useFormContext()
 
   const { trainer, pokemon } = state;
-  
+
   return (
     <div className="detalhe-formulario">
       <div className="cabecalho">
@@ -25,8 +25,8 @@ const Detalhe = () => {
           <p>Nome:  {pokemon.nomePokemon}</p>
           <p>Tipo:  {pokemon.tipoPokemon}</p>
           <p>Elemento:  {pokemon.elementoPokemon}</p>
-          <p>Altura:  {pokemon.alturaPokemon}</p>
-          <p>Idade:  {pokemon.idadePokemon}</p>
+          <p>Altura:  {pokemon.alturaPokemon ? `${pokemon.alturaPokemon}cm`: ""}</p>
+          <p>Idade:  {pokemon.idadePokemon ? `${pokemon.idadePokemon} anos` : ""} </p>
         </div>
       </section>
       <button
