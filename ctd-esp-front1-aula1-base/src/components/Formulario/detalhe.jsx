@@ -14,19 +14,19 @@ const Detalhe = () => {
       <section className="dados-cliente">
         <h4>Dados do Treinador</h4>
         <div className="lista">
-          <p>Nome: {trainer.nome}</p>
-          <p>Sobrenome:  {trainer.sobrenome}</p>
+          <p>Nome: {trainer.name}</p>
+          <p>Sobrenome:  {trainer.lastName}</p>
           <p>Email:  {trainer.email}</p>
         </div>
       </section>
       <section className="dados-cliente">
         <h4>Dados do Pokémon</h4>
         <div className="lista">
-          <p>Nome:  {pokemon.nomePokemon}</p>
-          <p>Tipo:  {pokemon.tipoPokemon}</p>
-          <p>Elemento:  {pokemon.elementoPokemon}</p>
-          <p>Altura:  {pokemon.alturaPokemon ? `${pokemon.alturaPokemon}cm`: ""}</p>
-          <p>Idade:  {pokemon.idadePokemon ? `${pokemon.idadePokemon} anos` : ""} </p>
+          <p>Nome:  {pokemon.name}</p>
+          <p>Tipo:  {pokemon.type}</p>
+          <p>Elemento:  {pokemon.element}</p>
+          <p>Altura:  {pokemon.height ? `${pokemon.height}cm`: ""}</p>
+          <p>Idade:  {pokemon.age ? `${pokemon.age} anos` : ""} </p>
         </div>
       </section>
       <button

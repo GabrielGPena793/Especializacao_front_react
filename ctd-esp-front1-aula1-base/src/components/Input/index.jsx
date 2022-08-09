@@ -9,10 +9,19 @@ const Input = ({ name, label, type = "text" }) => {
 
   const onBlur = () => {
     const fieldValue = inputRef.current.value;
+    const index = name.indexOf("Pokemon")
+    let field;
+    console.log(index < 0)
+
+    if(index >= 0){
+      field = name.slice(0, index)
+    }else {
+      field = name;
+    }
 
     dispatch({
       type: name.includes("Pokemon") ? "UPDATE_POKEMON" : "UPDATE_TRAINER",
-      payload: {[name] : fieldValue}
+      payload: {[field] : fieldValue}
     })
   };
 
