@@ -41,9 +41,9 @@ const Input = ({ name, label, type = "text" }) => {
 
 
 Input.propTypes = {
-  name: propTypes.string.isRequired,
-  label: propTypes.string.isRequired,
-  type: propTypes.string.isRequired
+  name: propTypes.string,
+  label: propTypes.string,
+  type: propTypes.string
 }
 
 
