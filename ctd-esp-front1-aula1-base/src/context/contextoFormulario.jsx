@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { createContext, useReducer } from "react";
+import propTypes from "prop-types"
 
 const FormContext = createContext({});
 
@@ -85,4 +86,8 @@ export function FormProvider({ children }) {
     {children}
   </FormContext.Provider>
   );
+}
+
+FormProvider.propTypes = {
+  children: propTypes.arrayOf(propTypes.element)
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types"
 import { useRef } from "react";
 import { useFormContext } from "../../context/contextoFormulario";
 
@@ -37,5 +38,13 @@ const Input = ({ name, label, type = "text" }) => {
     </div>
   );
 };
+
+
+Input.propTypes = {
+  name: propTypes.string.isRequired,
+  label: propTypes.string.isRequired,
+  type: propTypes.string.isRequired
+}
+
 
 export default Input;

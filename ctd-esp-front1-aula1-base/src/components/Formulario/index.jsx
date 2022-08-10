@@ -32,8 +32,8 @@ const Formulario = () => {
                   <img src={treinador} alt="treinador" />
                   <span>Treinador</span>
                 </p>
-                <Input name="name" label="Nome" />
-                <Input name="lastName" label="Sobrenome" />
+                <Input name="nome" label="Nome" />
+                <Input name="sobrenome" label="Sobrenome" />
                 <Input name="email" label="Email" type="email" />
               </div>
               <div>
